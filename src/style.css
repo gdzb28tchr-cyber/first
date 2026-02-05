@@ -1,0 +1,94 @@
+:root {
+  color-scheme: dark;
+  font-family: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+  background-color: #0c0f18;
+  color: #e6eaf2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1b2340, #0c0f18 55%);
+}
+
+.app {
+  width: min(900px, 92vw);
+  display: grid;
+  gap: 24px;
+  padding: 32px 20px 48px;
+  text-align: center;
+}
+
+.app__header h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.6rem, 2vw + 1rem, 2.4rem);
+}
+
+.app__header p {
+  margin: 0;
+  color: #a9b2c9;
+}
+
+.controls {
+  display: grid;
+  gap: 12px;
+  align-items: center;
+  justify-items: center;
+}
+
+.primary {
+  background: #6d7dff;
+  color: #0c0f18;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(109, 125, 255, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 34px rgba(109, 125, 255, 0.4);
+}
+
+.primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.status {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #d1d7e8;
+}
+
+.visualizer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas {
+  width: min(420px, 80vw);
+  height: min(420px, 80vw);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.error {
+  margin: 0;
+  color: #ff8a8a;
+  font-weight: 600;
+}

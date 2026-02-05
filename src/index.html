@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mic Pulse Visualizer</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>마이크 리듬 원</h1>
+        <p>
+          마이크 입력을 받아 원의 크기가 오디오 레벨과 저주파 에너지에 반응합니다.
+        </p>
+      </header>
+
+      <section class="controls">
+        <button id="startButton" class="primary">마이크 시작</button>
+        <p id="status" class="status" aria-live="polite">
+          시작 버튼을 눌러 마이크 권한을 요청하세요.
+        </p>
+      </section>
+
+      <section class="visualizer" aria-label="오디오 시각화">
+        <canvas id="viz" width="600" height="600"></canvas>
+      </section>
+
+      <p id="error" class="error" role="alert" hidden></p>
+    </main>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
